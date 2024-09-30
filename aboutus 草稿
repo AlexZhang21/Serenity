@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Serenity Resources Pte. Ltd.</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* 固定在页面顶部的样式 */
+        #fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+            border-bottom: 2px solid #ccc; /* 底部边框 */
+            padding: 10px; /* 内边距 */
+            z-index: 1000; /* 确保在其他内容之上 */
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 垂直居中对齐 */
+        }
+
+        /* 自定义 logo 样式 */
+        .custom-image {
+            width: 50px; /* 设置 logo 宽度 */
+            height: 50px; /* 设置 logo 高度 */
+            margin-right: 15px; /* logo 与链接之间的间距 */
+        }
+
+        /* 链接样式 */
+        #fixed-header li {
+            display: inline; /* 将列表项设置为行内显示 */
+            margin-right: 20px; /* 每个链接之间的间距 */
+        }
+
+        /* 主内容下移以留出空间 */
+        body {
+            padding-top: 60px; /* 给主内容留出空间，避免被固定框覆盖 */
+        }
+
+        /* Container for the two images under the main section */
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px auto; /* Center the image container */
+            width: 80%; /* Set the width of the image container */
+        }
+
+        /* Styles for the images inside the image gallery */
+        .image-gallery img {
+            width: 40%; /* Each image takes up almost half the container */
+            height: auto; /* Maintain the aspect ratio */
+            opacity: 0; /* 初始透明度为 0 */
+            transform: translateX(-50px); /* 初始位置稍微向左偏移 */
+            animation: slideIn 0.5s forwards; /* 添加动画 */
+        }
+
+        /* 每张图片的延迟动画 */
+        .image-gallery img:nth-child(1) {
+            animation-delay: 0.3s; /* 第一个图片延迟 0.3 秒 */
+        }
+
+        .image-gallery img:nth-child(2) {
+            animation-delay: 0.6s; /* 第二个图片延迟 0.6 秒 */
+        }
+
+        /* 动画效果定义 */
+        @keyframes slideIn {
+            to {
+                opacity: 1; /* 结束时透明度为 1 */
+                transform: translateX(0); /* 结束时回到原位置 */
+            }
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px; /* Add some padding to the footer */
+            position: relative; /* Ensure it sits below content */
+        }
+
+        /* Style for the bordered box with text inside */
+        .border-box {
+            border: 2px solid rgb(215, 64, 64); /* Solid black border */
+            padding: 10px; /* Space between the text and the border */
+            text-align: center; /* Center the text inside the box */
+            display: inline-block; /* Keeps the box size around the text */
+            font-size: 20px; /* Adjust the font size of the text */
+            margin: 20px auto; /* Center the box */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 固定顶部框 -->
+    <div id="fixed-header">
+        <img class="custom-image" src="florist images/logo.2d4162a5.png" alt="Serenity Resources">
+        <ul>
+            <li><a href="ass1.html">HOME |</a></li> 
+            <li><a href="About us.html">ABOUT US |</a></li>  
+            <li><a href="contact.html">CONTACT US |</a></li>  
+            <li><a href="PRODUCTS & SERVICES.html">PRODUCTS & SERVICES |</a></li>  
+        </ul>
+    </div>
+    
+    <div id="container">
+        <!-- Use the header area for the website name or logo --> 
+        <header>
+            <h1>Serenity Resources Pte. Ltd.</h1>
+            <img src="florist images/ggs.jpg" alt="Header Image">
+        </header>
+
+        <!-- Use the main area to add the main content to the webpage -->
+        <main>
+            <div id="contact">
+                <h2>Who we are?</h2>
+                <h3>Established in 2019 in Singapore, Serenity Resources Pte Ltd is a fast-growing Singapore commodity trading house covering a wide range of energy products. We work with international partners to support and supply global energy flows, moving energy responsibly, safely and cost effectively around the world. We commit people, capital and ideas to help our clients and trading partners grow together with us.</h3>
+            </div>
+        </main>
+
+        <!-- Image Gallery (Two images side by side) -->
+        <div class="image-gallery">
+            <img src="florist images/contact.jpg" alt="Image 1">
+            <img src="florist images/Screenshot 2024-09-23 134700.png" alt="Image 2">
+        </div>
+        
+        <div class="border-box">
+            <h4>Our Strength</h4>
+            <h2>
+                <p>1. In-depth market knowledge</p>
+                <p>2. Global access to all key exchanges and trading places</p>
+                <p>3. Reassurance of delivering on specification and on time</p>
+                <p>4. Robust Financial Risk Management</p>
+                <p>5. Unravelled in-house market intelligence and analysis</p>
+            </h2>
+        </div>
+    </div>
+
+    <!-- Use the footer area to add webpage footer content -->
+    <footer>
+        <p>Serenity Resources Pte. Ltd. &copy; 2019</p> 
+        <p>7 Temasek Boulevard #08-03, Suntec Tower One, Singapore 038987</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Serenity Resources Pte. Ltd.</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* 固定在页面顶部的样式 */
+        #fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+            border-bottom: 2px solid #ccc; /* 底部边框 */
+            padding: 10px; /* 内边距 */
+            z-index: 1000; /* 确保在其他内容之上 */
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 垂直居中对齐 */
+        }
+
+        /* 自定义 logo 样式 */
+        .custom-image {
+            width: 50px; /* 设置 logo 宽度 */
+            height: 50px; /* 设置 logo 高度 */
+            margin-right: 15px; /* logo 与链接之间的间距 */
+        }
+
+        /* 链接样式 */
+        #fixed-header li {
+            display: inline; /* 将列表项设置为行内显示 */
+            margin-right: 20px; /* 每个链接之间的间距 */
+        }
+
+        /* 主内容下移以留出空间 */
+        body {
+            padding-top: 60px; /* 给主内容留出空间，避免被固定框覆盖 */
+        }
+
+        /* 自动滚动区域的样式 */
+        .scroll-container {
+            background-color: rgb(120, 197, 230); /* 蓝色背景 */
+            color: white; /* 白色文本 */
+            width: 100%; /* 全宽 */
+            height: 50px; /* 固定高度 */
+            overflow: hidden; /* 隐藏溢出的内容 */
+            position: relative; /* 相对定位容器 */
+            margin-top: 20px; /* 与其他内容有些间距 */
+        }
+
+        /* 滚动内容的样式 */
+        .scroll-text {
+            position: absolute;
+            white-space: nowrap; /* 防止文本换行 */
+            display: flex; /* 使用flex布局来让图片和文字在同一行 */
+            align-items: center; /* 垂直居中对齐 */
+            animation: scroll 20s linear infinite; /* 滚动动画，20秒循环 */
+            font-size: 30px; /* 设置滚动文字的字体大小 */
+        }
+
+        /* 滚动动画的关键帧 */
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%); /* 从右边开始 */
+            }
+            100% {
+                transform: translateX(-100%); /* 移动到左边外 */
+            }
+        }
+
+        /* 滚动图片的样式 */
+        .scroll-text img {
+            vertical-align: middle; /* 图片和文字垂直对齐 */
+            margin-right: 10px; /* 图片与文字之间的间距 */
+            height: 40px; /* 调整图片高度 */
+            width: auto; /* 保持图片的宽高比 */
+        }
+
+        /* 轮播图容器样式 */
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto; /* 居中并设置与其他内容的间距 */
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-image {
+            min-width: 100%;
+            height: 400px; /* 轮播图的高度 */
+            object-fit: cover; /* 保持图片的宽高比例 */
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .carousel-button.prev {
+            left: 10px;
+        }
+
+        .carousel-button.next {
+            right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- 固定顶部框 -->
+    <div id="fixed-header">
+        <img class="custom-image" src="florist images/logo.2d4162a5.png" alt="Serenity Resources">
+        <ul>
+            <li><a href="ass1.html">HOME    |</a></li> 
+            <li><a href="About us.html">ABOUT US     |</a></li>  
+            <li><a href="contact.html">CONTACT US     |</a></li>  
+            <li><a href="PRODUCTS & SERVICES.html">PRODUCTS & SERVICES      |</a></li>  
+        </ul>
+    </div>
+    
+    <!-- 圆形图片 -->
+    <div style="text-align: center;">
+        <img src="florist images/Screenshot 2024-09-23 134700.png" class="circular-image" style="max-width:400px" >
+    </div>
+
+    <!-- 轮播图功能 -->
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="florist images/did.jpg" alt="Slide 1" class="carousel-image">
+            <img src="florist images/ggs.jpg" alt="Slide 2" class="carousel-image">
+            <img src="florist images/contact.jpg" alt="Slide 3" class="carousel-image">
+        </div>
+        <button class="carousel-button prev">❮</button>
+        <button class="carousel-button next">❯</button>
+    </div>
+
+    <!-- 主内容区域 -->
+    <main>
+        <div id="intro">
+            <p class="headline">Who we are?</p> <!-- Apply the class to this paragraph -->
+            <p>Established in 2019 in Singapore, Serenity Resources Pte Ltd is a fast-growing 
+               Singapore commodity trading house covering a wide range of energy products. We 
+               work with international partners to support and supply global energy flows, moving 
+               energy responsibly, safely and cost-effectively around the world. 
+               We commit people, capital and ideas to help our clients and trading partners grow 
+               together with us.
+            </p>
+        </div>
+    </main>
+    
+    <!-- 自动滚动区域 -->
+    <div class="scroll-container">
+        <div class="scroll-text">
+            <img src="florist images/logo.2d4162a5.png" alt="Serenity Logo"> <!-- 添加滚动的图片 -->
+            Latest News: Serenity Resources expands its operations in Asia | Introducing new energy products for 2024 | Stay tuned for upcoming events...
+        </div>
+    </div>
+
+    <!-- 页脚区域 -->
+    <footer><br>
+        <p> Serenity Resources Pte. Ltd.&copy;2019</p> 
+        <p>7 Temasek Boulevard #08-03, Suntec Tower One, Singapore 038987</p>
+    </footer>
+
+    <!-- 轮播图脚本 -->
+    <script>
+        const slide = document.querySelector('.carousel-slide');
+        const images = document.querySelectorAll('.carousel-image');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+
+        let currentIndex = 0;
+
+        // 更新轮播图位置
+        function updateSlide() {
+            slide.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // 点击下一张
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // 循环回到第一张
+            }
+            updateSlide();
+        });
+
+        // 点击上一张
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = images.length - 1; // 循环回到最后一张
+            }
+            updateSlide();
+        });
+
+        // 自动轮播功能（可选）
+        let autoSlideInterval = setInterval(() => {
+            nextButton.click();
+        }, 3000);
+
+        // 鼠标悬停时暂停自动轮播
+        document.querySelector('.carousel-container').addEventListener('mouseover', () => {
+            clearInterval(autoSlideInterval);
+        });
+
+        // 鼠标离开时继续自动轮播
+        document.querySelector('.carousel-container').addEventListener('mouseout', () => {
+            autoSlideInterval = setInterval(() => {
+                nextButton.click();
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+

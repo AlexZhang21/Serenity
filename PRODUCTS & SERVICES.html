@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Serenity Resources Pte. Ltd. - Products & Services</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* 固定在页面顶部的样式 */
+        #fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-bottom: 2px solid #ccc;
+            padding: 10px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        /* 自定义 logo 样式 */
+        .custom-image {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        /* 链接样式 */
+        #fixed-header li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        /* 主内容下移以留出空间 */
+        body {
+            padding-top: 60px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 卡片容器样式 */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 响应式布局 */
+            gap: 20px;
+            padding: 20px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* 每个产品的卡片样式 */
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* 卡片悬停时效果 */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 卡片标题样式 */
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: rgb(215, 64, 64); /* 颜色统一为与公司logo匹配 */
+        }
+
+        /* 卡片内容样式 */
+        .card p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        /* 图片样式 */
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        /* 卡片的更多信息区域 */
+        .more-info {
+            display: none;
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        /* 鼠标悬停时显示更多信息 */
+        .card:hover .more-info {
+            display: block;
+        }
+
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <!-- 固定顶部框 -->
+    <div id="fixed-header">
+        <img class="custom-image" src="florist images/logo.2d4162a5.png" alt="Serenity Resources">
+        <ul>
+            <li><a href="ass1.html">HOME |</a></li> 
+            <li><a href="About us.html">ABOUT US |</a></li>  
+            <li><a href="contact.html">CONTACT US |</a></li>  
+            <li><a href="PRODUCTS & SERVICES.html">PRODUCTS & SERVICES |</a></li>  
+        </ul>
+    </div>
+
+    <div id="container">
+        <!-- 页面标题 -->
+        <header>
+            <h1>Our Products and Services</h1>
+        </header>
+
+        <!-- 产品卡片布局 -->
+        <div class="card-container">
+            <!-- Crude, Refined products and Petrochemical -->
+            <div class="card">
+                <h3>Crude, Refined Products and Petrochemical</h3>
+                <img src="florist images/crude-oil.jpg" alt="Crude Oil">
+                <p>We specialize in trading crude oil, refined products, and petrochemicals, ensuring global energy flows efficiently through secure and responsible channels.</p>
+                <div class="more-info">
+                    <p><strong>Highlights:</strong></p>
+                    <p>1. Access to major global energy markets.</p>
+                    <p>2. Strong partnerships with global refiners.</p>
+                </div>
+            </div>
+
+            <!-- Base Metal -->
+            <div class="card">
+                <h3>Base Metal</h3>
+                <img src="florist images/base-metal.jpg" alt="Base Metal">
+                <p>Our trading expertise extends to base metals like copper, aluminum, and zinc, providing a reliable supply chain for industrial uses worldwide.</p>
+                <div class="more-info">
+                    <p><strong>Highlights:</strong></p>
+                    <p>1. Comprehensive market knowledge.</p>
+                    <p>2. Efficient risk management and supply chain optimization.</p>
+                </div>
+            </div>
+
+            <!-- Bunkering -->
+            <div class="card">
+                <h3>Bunkering</h3>
+                <img src="florist images/bunkering.jpg" alt="Bunkering Services">
+                <p>We provide high-quality bunkering services, ensuring ships get the necessary fuel for efficient operations across international waters.</p>
+                <div class="more-info">
+                    <p><strong>Highlights:</strong></p>
+                    <p>1. Seamless, on-time fuel delivery.</p>
+                    <p>2. Safety and environmental standards are a priority.</p>
+                </div>
+            </div>
+
+            <!-- Biofuel and Renewables Commodity -->
+            <div class="card">
+                <h3>Biofuel and Renewables Commodity</h3>
+                <img src="florist images/biofuel.jpg" alt="Biofuel">
+                <p>We actively promote and trade biofuels and other renewable commodities, contributing to a more sustainable and greener future.</p>
+                <div class="more-info">
+                    <p><strong>Highlights:</strong></p>
+                    <p>1. Focus on sustainability and reducing carbon emissions.</p>
+                    <p>2. Diverse portfolio of renewable energy products.</p>
+                </div>
+            </div>
+
+            <!-- Risk Management and Financing -->
+            <div class="card">
+                <h3>Risk Management and Financing</h3>
+                <img src="florist images/risk-management.jpg" alt="Risk Management">
+                <p>We offer comprehensive risk management and financing solutions, helping our clients mitigate market volatility and financial risks.</p>
+                <div class="more-info">
+                    <p><strong>Highlights:</strong></p>
+                    <p>1. Tailored risk management strategies.</p>
+                    <p>2. Strong financial backing and market analysis.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <footer>
+            <p>Serenity Resources Pte. Ltd. &copy; 2019</p>
+            <p>7 Temasek Boulevard #08-03, Suntec Tower One, Singapore 038987</p>
+        </footer>
+    </div>
+</body>
+</html>
+

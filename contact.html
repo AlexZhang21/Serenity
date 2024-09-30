@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Serenity Resources Pte. Ltd.</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* 固定在页面顶部的样式 */
+        #fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+            border-bottom: 2px solid #ccc; /* 底部边框 */
+            padding: 10px; /* 内边距 */
+            z-index: 1000; /* 确保在其他内容之上 */
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 垂直居中对齐 */
+        }
+
+        /* 自定义 logo 样式 */
+        .custom-image {
+            width: 50px; /* 设置 logo 宽度 */
+            height: 50px; /* 设置 logo 高度 */
+            margin-right: 15px; /* logo 与链接之间的间距 */
+        }
+
+        /* 链接样式 */
+        #fixed-header li {
+            display: inline; /* 将列表项设置为行内显示 */
+            margin-right: 20px; /* 每个链接之间的间距 */
+        }
+
+        /* 主内容下移以留出空间 */
+        body {
+            padding-top: 60px; /* 给主内容留出空间，避免被固定框覆盖 */
+        }
+
+        /* 设置左边的内容容器 */
+        .content {
+            width: 50%; /* 左边内容占一半宽度 */
+            float: left; /* 左浮动 */
+        }
+
+        /* 设置地图容器 */
+        .map {
+            width: 50%; /* 右边地图占一半宽度 */
+            float: right; /* 右浮动 */
+        }
+
+        /* 清除浮动 */
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* 表单样式 */
+        .form-container {
+            margin-top: 20px;
+        }
+
+        /* 输入框样式 */
+        .custom-input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9; /* 异色背景 */
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        /* 标签样式 */
+        .form-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* 提交按钮样式 */
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* 提交按钮悬停效果 */
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 固定顶部框 -->
+    <div id="fixed-header">
+        <img class="custom-image" src="florist images/logo.2d4162a5.png" alt="Serenity Resources">
+        <ul>
+            <li><a href="ass1.html">HOME    |</a></li> 
+            <li><a href="About us.html">ABOUT US     |</a></li>  
+            <li><a href="contact.html">CONTACT US     |</a></li>  
+            <li><a href="PRODUCTS & SERVICES.html">PRODUCTS & SERVICES      |</a></li>  
+        </ul>
+    </div>
+
+    <div id="container">
+        <!-- Use the header area for the website name or logo --> 
+        <header>
+            <h1>Serenity Resources Pte. Ltd.</h1>
+            <a href="ass1.html"><img src="florist images/contact.jpg" alt="Singapore" height="220" width="297"></a>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="clearfix">
+            <div class="content">
+                <h2>Where to find us:</h2>
+                <h4>7 Temasek Boulevard #08-03, Suntec Tower One, Singapore 038987</h4>
+				<h2>Get in touch:</h2>
+				<h4><p>Email: trading@serenity.sg</p>
+					<p>Tel: +65 6980 7062</p>
+					<p>Fax: +65 6980 7064</p></h4>
+                
+                <!-- 表单区域 -->
+                <div class="form-container">
+                    <h2>Fill in your details:</h2>
+                    <form>
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" name="name" class="custom-input" placeholder="Enter your name...">
+                        
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="custom-input" placeholder="Enter your email...">
+
+                        <input type="submit" value="Submit" class="submit-button">
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- 地图浮动到右侧 -->
+            <div class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15875.30115209124!2d103.8590676!3d1.2954265!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19c81be6b37f%3A0x56327ef7d41a6c94!2s7%20Temasek%20Boulevard%20%238-03%2C%20Suntec%20Tower%20One%2C%20Singapore%20038987!5e0!3m2!1sen!2sth!4v1633950375483!5m2!1sen!2sth" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer><br>
+            <p>Serenity Resources Pte. Ltd. &copy; 2019</p> 
+            <p>7 Temasek Boulevard #08-03, Suntec Tower One, Singapore 038987</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Serenity Resources Pte. Ltd.</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* 固定在页面顶部的样式 */
+        #fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+            border-bottom: 2px solid #ccc; /* 底部边框 */
+            padding: 10px; /* 内边距 */
+            z-index: 1000; /* 确保在其他内容之上 */
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 垂直居中对齐 */
+        }
+
+        /* 自定义 logo 样式 */
+        .custom-image {
+            width: 50px; /* 设置 logo 宽度 */
+            height: 50px; /* 设置 logo 高度 */
+            margin-right: 15px; /* logo 与链接之间的间距 */
+        }
+
+        /* 链接样式 */
+        #fixed-header li {
+            display: inline; /* 将列表项设置为行内显示 */
+            margin-right: 20px; /* 每个链接之间的间距 */
+        }
+
+        /* 主内容下移以留出空间 */
+        body {
+            padding-top: 60px; /* 给主内容留出空间，避免被固定框覆盖 */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 固定顶部框 -->
+    <div id="fixed-header">
+        <img class="custom-image" src="florist images/logo.2d4162a5.png" alt="Serenity Resources">
+        <ul>
+            <li><a href="ass1.html">HOME    |</a></li> 
+            <li><a href="About us.html">ABOUT US     |</a></li>  
+            <li><a href="contact.html">CONTACT US     |</a></li>  
+            <li><a href="PRODUCTS & SERVICES.html">PRODUCTS & SERVICES      |</a></li>  
+        </ul>
+    </div>
+	
+	
+	<div id="container">
+	
+		<!-- Use the header area for the website name or logo --> 
+		<header>
+			<h1>Serenity Resources Pte. Ltd.</h1>
+
+			<a href="ass1.html"><img src="florist images/did.jpg" alt="Forward Fitness Club logo"
+			height="220" width="297"></a>
+			
+		</header>
+
+		<!-- Use this nav area to add hyperlinks to other pages -->
+	
+
+		<!-- Use the main area to add the main content to the webpage -->
+		<main>
+
+			<div>
+				<p class="headline">Our Products and Services</p> <!-- Apply the class to this paragraph -->
+				<p>Crude, Refined products and Petrochemical
+					<p>Base Metal</p>
+					<p>Bunkering</p>
+					<p>Biofuel and Renewables Commodity</p>
+					<p>Risk Management and Financing
+				</p>
+			</div>
+
+		</main>
+		<!-- Use the footer area to add webpage footer content -->
+		<footer><br>
+			<p> Serenity Resources Pte. Ltd.&copy;2019</p> 
+			<p>7 Temasek Boulevard #08-03, Suntec Tower One, Singapore 038987</p>
+		</footer>
+		
+	</div>
+
+</body>
+</html>
+
+hater genshin im

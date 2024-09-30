@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Serenity Resources Pte. Ltd.</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* 固定在页面顶部的样式 */
+        #fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+            border-bottom: 2px solid #ccc; /* 底部边框 */
+            padding: 10px; /* 内边距 */
+            z-index: 1000; /* 确保在其他内容之上 */
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 垂直居中对齐 */
+        }
+
+        /* 自定义 logo 样式 */
+        .custom-image {
+            width: 50px; /* 设置 logo 宽度 */
+            height: 50px; /* 设置 logo 高度 */
+            margin-right: 15px; /* logo 与链接之间的间距 */
+        }
+
+        /* 链接样式 */
+        #fixed-header li {
+            display: inline; /* 将列表项设置为行内显示 */
+            margin-right: 20px; /* 每个链接之间的间距 */
+        }
+
+        /* 主内容下移以留出空间 */
+        body {
+            padding-top: 60px; /* 给主内容留出空间，避免被固定框覆盖 */
+        }
+
+        /* Container for the two images under the main section */
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px auto; /* Center the image container */
+            width: 80%; /* Set the width of the image container */
+        }
+
+        /* Styles for the images inside the image gallery */
+        .image-gallery img {
+            width: 40%; /* Each image takes up almost half the container */
+            height: auto; /* Maintain the aspect ratio */
+            opacity: 0; /* 初始透明度为 0 */
+            transform: translateX(-50px); /* 初始位置稍微向左偏移 */
+            animation: slideIn 0.5s forwards; /* 添加动画 */
+        }
+
+        /* 每张图片的延迟动画 */
+        .image-gallery img:nth-child(1) {
+            animation-delay: 0.3s; /* 第一个图片延迟 0.3 秒 */
+        }
+
+        .image-gallery img:nth-child(2) {
+            animation-delay: 0.6s; /* 第二个图片延迟 0.6 秒 */
+        }
+
+        /* 动画效果定义 */
+        @keyframes slideIn {
+            to {
+                opacity: 1; /* 结束时透明度为 1 */
+                transform: translateX(0); /* 结束时回到原位置 */
+            }
+        }
+
+        /* 时间轴样式 */
+        .timeline {
+            position: relative;
+            margin: 40px auto;
+            padding: 10px 0;
+            width: 80%; /* 宽度为页面的 80% */
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #ccc; /* 时间轴线的颜色 */
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+        }
+
+        /* 左边的时间节点 */
+        .timeline-item.left {
+            left: 0;
+            text-align: right;
+        }
+
+        /* 右边的时间节点 */
+        .timeline-item.right {
+            left: 50%;
+            text-align: left;
+        }
+
+        /* 时间节点的圆圈样式 */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* 时间节点中的内容块 */
+        .timeline-item-content {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-item-content h4 {
+            margin: 0;
+            font-size: 18px;
+            color: rgb(215, 64, 64); /* 标题颜色 */
+        }
+
+        .timeline-item-content p {
+            margin: 10px 0 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 固定顶部框 -->
+    <div id="fixed-header">
+        <img class="custom-image" src="florist images/logo.2d4162a5.png" alt="Serenity Resources">
+        <ul>
+            <li><a href="ass1.html">HOME |</a></li> 
+            <li><a href="About us.html">ABOUT US |</a></li>  
+            <li><a href="contact.html">CONTACT US |</a></li>  
+            <li><a href="PRODUCTS & SERVICES.html">PRODUCTS & SERVICES |</a></li>  
+        </ul>
+    </div>
+    
+    <div id="container">
+        <!-- Use the header area for the website name or logo --> 
+        <header>
+            <h1>Serenity Resources Pte. Ltd.</h1>
+            <img src="florist images/ggs.jpg" alt="Header Image">
+        </header>
+
+        <!-- Use the main area to add the main content to the webpage -->
+        <main>
+            <div id="contact">
+                <h2>Who we are?</h2>
+                <h3>Established in 2019 in Singapore, Serenity Resources Pte Ltd is a fast-growing Singapore commodity trading house covering a wide range of energy products. We work with international partners to support and supply global energy flows, moving energy responsibly, safely and cost effectively around the world. We commit people, capital and ideas to help our clients and trading partners grow together with us.</h3>
+            </div>
+        </main>
+
+        <!-- 时间轴部分 -->
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-item-content">
+                    <h4>2019.3</h4>
+                    <p>Company establishment Serenity Capital Investment Pte Ltd</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-item-content">
+                    <h4>Mid-2021</h4>
+                    <p>The company will transform into Trading and change its name to Serenity Resources Pte Ltd.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-item-content">
+                    <h4>2021.7</h4>
+                    <p>The company moved to its current address, Suntec Tower 1.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-item-content">
+                    <h4>2023.9</h4>
+                    <p>Approved to become a member of Singapore Global Trader Program.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-item-content">
+                    <h4>2023</h4>
+                    <p>Company turnover achieved remarkable growth.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-item-content">
+                    <h4>2024</h4>
+                    <p>More to come...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Gallery (Two images side by side) -->
+        <div class="image-gallery">
+            <img src="florist images/contact.jpg" alt="Image 1">
+            <img src="florist images/Screenshot 2024-09-23 134700.png" alt="Image 2">
+        </div>
+        
+        <div class="border-box">
+            <h4>Our Strength</h4>
+            <h2>
+                <p>1. In-depth market knowledge</p>
+                <p>2. Global access to all key exchanges and trading places</p>
+                <p>3. Reassurance of delivering on specification and on time</p>
+                <p>4. Robust Financial Risk Management</p>
+                <p>5. Unravelled in-house market intelligence and analysis</p>
+            </h2>
+        </div>
+    </div>
+
+    <!-- Use the footer area to add webpage footer content -->
+    <footer>
+        <p>Serenity Resources Pte. Ltd. &copy; 2019</p> 
+        <p>7 Temasek Boulevard #08-03, Suntec Tower One, Singapore 038987</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
